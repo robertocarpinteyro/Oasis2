@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Image from "next/image";
 import { AnimatePresence, motion } from "framer-motion";
 import { site } from "@/lib/site";
 
@@ -33,12 +34,17 @@ export default function Navbar() {
                 : "border-transparent bg-transparent"
             }`}
           >
-            <a href="#top" className="flex items-center gap-2.5 pl-1">
-              <Logo />
-              <span className="font-display text-lg font-semibold leading-none">
-                {site.short}
-                <span className="text-poppy">.</span>
-              </span>
+            <a href="#top" className="flex items-center pl-1" aria-label={site.name}>
+              {/* Logo en blanco: siempre sobre azul (hero) o sobre el pill oscuro. */}
+              <Image
+                src={site.logo}
+                alt={site.name}
+                width={120}
+                height={41}
+                priority
+                className="h-6 w-auto sm:h-7"
+                style={{ filter: "brightness(0) invert(1)" }}
+              />
             </a>
 
             <nav className="hidden items-center gap-1 md:flex">
@@ -78,10 +84,14 @@ export default function Navbar() {
             className="fixed inset-0 z-[60] flex flex-col bg-ink/95 p-6 backdrop-blur-xl md:hidden"
           >
             <div className="flex items-center justify-between">
-              <span className="font-display text-lg font-semibold">
-                {site.short}
-                <span className="text-poppy">.</span>
-              </span>
+              <Image
+                src={site.logo}
+                alt={site.name}
+                width={120}
+                height={41}
+                className="h-7 w-auto"
+                style={{ filter: "brightness(0) invert(1)" }}
+              />
               <button
                 onClick={() => setOpen(false)}
                 className="pill pill-ghost"
@@ -118,13 +128,5 @@ export default function Navbar() {
         )}
       </AnimatePresence>
     </>
-  );
-}
-
-function Logo() {
-  return (
-    <span className="grid h-9 w-9 place-items-center rounded-full bg-gradient-to-br from-mustard via-poppy to-pink">
-      <span className="h-3.5 w-3.5 rounded-full bg-ink" />
-    </span>
   );
 }

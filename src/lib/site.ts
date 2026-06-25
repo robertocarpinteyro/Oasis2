@@ -10,6 +10,7 @@ export const site = {
   location: "Puebla, México",
   tagline: "Productora audiovisual premium",
   email: "hola@oasiscreativa.mx",
+  logo: "https://res.cloudinary.com/dwxns5ke0/image/upload/v1782362557/1_jvg8jy.png",
   navlinks: [
     { label: "Proyectos", href: "#proyectos" },
     { label: "Servicios", href: "#servicios" },
@@ -34,7 +35,7 @@ export const media = {
   // Mientras esté vacío se muestra un placeholder con la paleta de marca.
   heroReel: {
     type: "video" as const,
-    src: "", // p.ej. https://res.cloudinary.com/<cloud>/video/upload/oasis/demo-reel-vertical.mp4
+    src: "https://res.cloudinary.com/dwxns5ke0/video/upload/v1782362643/Oasis-Demoreel_1_1_1_yq9az5.mp4",
     poster: "",
     label: "Demo reel vertical",
   },
