@@ -1,0 +1,92 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --shell: 1448px;
+}
+
+@layer base {
+  html {
+    -webkit-text-size-adjust: 100%;
+    scroll-behavior: smooth;
+  }
+
+  /* Lenis controla el scroll cuando JS está activo. */
+  html.lenis,
+  html.lenis body {
+    height: auto;
+  }
+  .lenis.lenis-smooth {
+    scroll-behavior: auto !important;
+  }
+  .lenis.lenis-stopped {
+    overflow: hidden;
+  }
+
+  body {
+    @apply bg-ink text-snow font-sans antialiased;
+    overflow-x: hidden;
+  }
+
+  ::selection {
+    @apply bg-poppy text-snow;
+  }
+
+  h1,
+  h2,
+  h3 {
+    @apply font-display tracking-tight;
+    text-wrap: balance;
+  }
+}
+
+@layer components {
+  .shell {
+    @apply mx-auto w-full max-w-shell px-5 sm:px-8;
+  }
+
+  .eyebrow {
+    @apply inline-flex items-center gap-2 text-xs font-medium uppercase tracking-[0.2em] text-snow/55;
+  }
+
+  .pill {
+    @apply inline-flex items-center justify-center gap-2 rounded-pill px-5 py-3 text-sm font-medium transition;
+  }
+
+  .pill-primary {
+    @apply bg-poppy text-snow hover:brightness-110;
+  }
+
+  .pill-light {
+    @apply bg-snow text-ink hover:brightness-95;
+  }
+
+  .pill-ghost {
+    @apply border border-snow/15 text-snow hover:border-snow/40;
+  }
+
+  /* Texto con degradado de la paleta de marca. */
+  .text-gradient {
+    background: linear-gradient(100deg, #ffc315, #ff7500, #ff1f2b, #ff6ab6);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  .card-surface {
+    @apply rounded-card border border-snow/10 bg-white/[0.03] backdrop-blur-sm;
+  }
+}
+
+/* Respeta a quien prefiere menos movimiento. */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
