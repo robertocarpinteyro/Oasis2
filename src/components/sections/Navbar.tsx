@@ -54,7 +54,7 @@ export default function Navbar() {
             </nav>
 
             <div className="flex items-center gap-2">
-              <a href={site.cta.href} className="pill pill-primary hidden sm:inline-flex">
+              <a href={site.cta.href} className="pill pill-light hidden sm:inline-flex">
                 {site.cta.label}
               </a>
               <button

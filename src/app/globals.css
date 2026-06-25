@@ -4,6 +4,19 @@
 
 :root {
   --shell: 1448px;
+  /* Hero estilo Mainframe */
+  --font-heading: "HelveticaNowDisplay-Medium", "Helvetica Neue", Arial, sans-serif;
+  --font-body: "HelveticaNowDisplayW01-Rg", "Helvetica Neue", Arial, sans-serif;
+}
+
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
 }
 
 @layer base {
@@ -30,7 +43,7 @@
   }
 
   ::selection {
-    @apply bg-poppy text-snow;
+    @apply bg-ocean text-snow;
   }
 
   h1,
@@ -55,7 +68,7 @@
   }
 
   .pill-primary {
-    @apply bg-poppy text-snow hover:brightness-110;
+    @apply bg-ocean text-snow hover:brightness-110;
   }
 
   .pill-light {

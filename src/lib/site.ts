@@ -30,6 +30,31 @@ export const media = {
     poster: "", // p.ej. https://res.cloudinary.com/<cloud>/image/upload/oasis/hero-poster.jpg
     label: "Reel principal — Oasis Creativa",
   },
+  // Demo reel VERTICAL del hero. Reemplazar `src` por tu URL de Cloudinary.
+  // Mientras esté vacío se muestra un placeholder con la paleta de marca.
+  heroReel: {
+    type: "video" as const,
+    src: "", // p.ej. https://res.cloudinary.com/<cloud>/video/upload/oasis/demo-reel-vertical.mp4
+    poster: "",
+    label: "Demo reel vertical",
+  },
+};
+
+/** Copy del hero (estilo conversacional Mainframe, adaptado a Oasis). */
+export const heroIntro = {
+  introLines: [
+    "Hola, somos Oasis Creativa,",
+    "productora audiovisual premium en Puebla.",
+  ],
+  typed:
+    "Qué bueno que llegaste. El buen contenido encuentra a quien lo busca. ¿Qué vamos a crear?",
+  pills: [
+    "Cuéntanos tu idea",
+    "Trabaja con nosotros",
+    "Envía un hola",
+    "Mira cómo operamos",
+  ],
+  contactEmail: "hola@oasiscreativa.mx",
 };
 
 export const hero = {
