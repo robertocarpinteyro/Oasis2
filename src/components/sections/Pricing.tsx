@@ -52,7 +52,7 @@ export default function Pricing() {
                   {entryPlan.price}
                 </span>
                 <span className="mb-2 text-sm text-snow/50">
-                  {entryPlan.currency}
+                  {entryPlan.currency} {pricing.tax}
                 </span>
               </div>
 
@@ -115,7 +115,10 @@ export default function Pricing() {
                   <span className="font-display text-2xl font-semibold">
                     {extraPlan.price}
                   </span>
-                  <span className="text-sm text-snow/45"> {extraPlan.currency}</span>
+                  <span className="text-sm text-snow/45">
+                    {" "}
+                    {extraPlan.currency} {pricing.tax}
+                  </span>
                 </div>
               </div>
               <p className="mt-3 text-sm text-snow/60">{extraPlan.tagline}</p>

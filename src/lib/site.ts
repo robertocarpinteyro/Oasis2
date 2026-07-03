@@ -187,8 +187,9 @@ export const pricing = {
     "Contenido premium con un punto de entrada pensado para arrancar con ventaja.",
   intro:
     "Un esquema simple y transparente: un paquete de entrada con todo el estándar premium de Oasis, la opción de sumar producción cuando la necesites y proyectos a medida para lo que quieras llevar más lejos.",
+  tax: "+ IVA",
   note:
-    "Todas las producciones —sin excepción— incluyen el estándar premium de Oasis: cámaras de alta gama, iluminación profesional, drone FPV, VFX/SFX, color grading y audio de calidad.",
+    "Precios en pesos mexicanos (MXN); no incluyen IVA. Todas las producciones —sin excepción— incluyen el estándar premium de Oasis: cámaras de alta gama, iluminación profesional, drone FPV, VFX/SFX, color grading y audio de calidad.",
 };
 
 export const entryPlan = {
