@@ -176,62 +176,60 @@ export const about = {
     "Para marcas medianas regionales y nacionales que quieren verse a la altura de las grandes en redes, sin la inconsistencia de freelancers sueltos ni el costo y la lentitud de las agencias grandes.",
 };
 
-export type Plan = {
-  name: string;
-  badge?: string;
-  productions: string;
-  reels: string;
-  photos: string;
-  price: string;
-  perProduction: string;
-  featured?: boolean;
-  note?: string;
+/** Propuesta personalizada. */
+export const proposal = {
+  client: "Isabela Rossano",
 };
 
-export const plans: Plan[] = [
-  {
-    name: "Origen",
-    badge: "Cupo limitado",
-    productions: "2",
-    reels: "6",
-    photos: "50",
-    price: "$10,000",
-    perProduction: "$5,000 / producción",
-    note: "Introductorio — entra al estándar premium.",
-  },
-  {
-    name: "Impulso",
-    badge: "Recomendado",
-    productions: "4",
-    reels: "12",
-    photos: "100",
-    price: "~$18,000",
-    perProduction: "$4,500 / producción",
-    featured: true,
-    note: "El equilibrio entre volumen y ritmo de marca.",
-  },
-  {
-    name: "Referente",
-    productions: "6",
-    reels: "18",
-    photos: "150",
-    price: "~$25,000",
-    perProduction: "$4,167 / producción",
-    note: "Presencia constante y de alto volumen.",
-  },
-  {
-    name: "A Medida",
-    productions: "Por proyecto",
-    reels: "—",
-    photos: "—",
-    price: "desde $40,000",
-    perProduction: "Institucionales · spots TV · campañas",
-    note: "Proyectos grandes de alto ticket.",
-  },
-];
+export const pricing = {
+  eyebrow: "Inversión",
+  title:
+    "Contenido premium con un punto de entrada pensado para arrancar con ventaja.",
+  intro:
+    "Un esquema simple y transparente: un paquete de entrada con todo el estándar premium de Oasis, la opción de sumar producción cuando la necesites y proyectos a medida para lo que quieras llevar más lejos.",
+  note:
+    "Todas las producciones —sin excepción— incluyen el estándar premium de Oasis: cámaras de alta gama, iluminación profesional, drone FPV, VFX/SFX, color grading y audio de calidad.",
+};
 
-export const pricingNote =
-  "Todos los niveles mensuales son igualas (ingreso recurrente) e incluyen el mismo estándar premium: cámaras de alta gama, iluminación, drone FPV, VFX/SFX, color grading y audio. Cambia el volumen, no la calidad.";
+export const entryPlan = {
+  name: "Paquete de entrada",
+  badge: "Empieza aquí",
+  price: "$10,000",
+  currency: "MXN",
+  tagline:
+    "Todo lo que tu marca necesita para verse premium desde el primer día.",
+  includes: [
+    { value: "2", label: "Producciones premium" },
+    { value: "4", label: "Reels" },
+  ],
+  gifts: [
+    { value: "+1", label: "Reel adicional" },
+    { value: "+20", label: "Fotografías" },
+  ],
+  giftLine: "Y porque queremos que arranques con ventaja, van de regalo:",
+  cta: "Quiero este paquete",
+};
+
+export const extraPlan = {
+  name: "Producción extra",
+  price: "$5,000",
+  currency: "MXN",
+  tagline:
+    "¿Necesitas más volumen? Suma producción cuando lo pidas, al mismo nivel premium.",
+  includes: ["1 producción", "2 reels"],
+  cta: "Agregar producción",
+};
+
+export const customPlan = {
+  name: "Producción a medida",
+  tagline:
+    "Institucionales, cineminutos, spots y campañas de mayor escala, cotizados de forma individual según tu objetivo.",
+  price: "Cotización individual",
+  cta: "Solicitar cotización",
+};
+
+export const pricingClose =
+  "este es el punto de partida. Cuando quieras, ajustamos el alcance a los objetivos de tu marca y crecemos desde ahí.";
 
 export const process = {
   eyebrow: "Cómo trabajamos",
